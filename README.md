@@ -26,7 +26,14 @@ Passengers on Deutsche Bahn often face irregular train delays and disruptions be
 | **Integration**      | REST APIs, WebSockets                        | Connecting frontend, backend, and data pipelines for real-time updates.    |
 | **Data Sources**     | Deutsche Bahn Open Data API, OpenWeatherMap API, Calendar/Holiday API | Source data for train schedules, weather conditions, and holidays.        |
 
+# Project Risk
+1. Description: The Predictive Train Delay and Disruption Analysis system needs good, reliable data to work well. However Deutsche Bahn’s data like live delay reports, schedules, and disruption logs might not always be complete or easy to use. Other data sources, like weather updates or calendar events, can also have missing information, slow updates, or access limits. If the data is poor or limited, the machine learning model won’t perform as well.
+ 
+2. Impact: If the data is inaccurate, incomplete, or hard to get, the system might give wrong delay predictions. This would lower the models accuracy and make it less useful for passengers and operators. Overall poor data could prevent the project from achieving its goal of providing reliable, real time train information.
+   
+4. Mitigation: To handle this risk, the project will combine open Deutsche Bahn data with live weather info from OpenWeatherMap and calendar data from Google Calendar. The data will be cleaned and corrected to fix missing or inconsistent values. When data is incomplete, historical or simulated data can be used for training the model. The system will also retrain and validate the model regularly to keep predictions accurate over time.
 
 # Phase Status
 1. Conception Phase - Done
-2. Development Phase - under progress
+2. Development Phase - Done
+3. Finalisation Phase - In progress
